@@ -16,7 +16,7 @@ export default {
     
     .slide-enter-active,
     .slide-leave-active{
-        transition: opacity 0.5s;
+        transition: opacity 0.4s;
     }
 
     .slide-enter-from,
