@@ -31,8 +31,8 @@ export default {
         let autoplayInterval;
         const currentSlide = inject("currentSlide");
         const getSlideCount = ref(null);
-        const autoPlayEnabled = ref(false);
-        const timeoutDuration = ref(15000);
+        const autoPlayEnabled = ref(true);
+        const timeoutDuration = ref(20000);
 
         //next slide
         const nextSlide = () => {
