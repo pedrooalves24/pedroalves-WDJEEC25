@@ -7,7 +7,7 @@
         </div>
 
         <div v-show="currentSlide === index" class="slide-info" v-else-if="index === 2">
-          <p>Choose your favorite date</p>
+          <p>Choose your favorite date: <br> </p>
           <input type="date" v-model="selectedDate" class="date-input">
         </div>
 
@@ -16,7 +16,7 @@
             <div class="flex-1">Imagine creating layouts with floats and positioning...</div>
             <div class="flex-2">Why is the Shrek script here?</div> 
             <div class="flex-3">I was hoping there would be free bitcoin :(</div>
-            <div class="flex-4">SHREK 1 > ALL THE OTHER SHRECK'S</div>
+            <div class="flex-4">SHREK 2 > ALL THE OTHER SHRECK'S</div>
             <div class="flex-5"></div>
           </div>
         </div>
@@ -31,7 +31,7 @@
       <p>"[♪ All-Star By Smash Mouth Playing]"</p>
     </div>
     <div v-else-if="currentSlide === 2" class="answer2">
-      <p>Selected Date <br> {{ selectedDate }}</p>
+      <p>Selected Date: {{ selectedDate }}</p>
     </div>
   </div>
 </template>
