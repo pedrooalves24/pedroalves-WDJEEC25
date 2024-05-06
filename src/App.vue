@@ -17,7 +17,6 @@
             <div class="flex-2">Why is the Shrek script here?</div> 
             <div class="flex-3">I was hoping there would be free bitcoin :(</div>
             <div class="flex-4">SHREK 2 > ALL THE OTHER SHRECK'S</div>
-            <div class="flex-5"></div>
           </div>
         </div>
 
@@ -26,12 +25,11 @@
         </div>
       </Slide>
     </Carousel>
-    <!-- Something outside the carousel -->
     <div v-if="currentSlide === 1" class="answer1">
       <p>"[♪ All-Star By Smash Mouth Playing]"</p>
     </div>
     <div v-else-if="currentSlide === 2" class="answer2">
-      <p>Selected Date: {{ selectedDate }}</p>
+      <p>Selected Date: {{ selectedDate ? selectedDate :  '___________'}}</p>
     </div>
   </div>
 </template>
@@ -80,8 +78,8 @@ export default {
     text-align: center; /* Center text horizontally */
 
     img {
-      max-width: 100%; /* Make sure the image fits within the slide */
-      max-height: 100%; /* Make sure the image fits within the slide */
+      max-width: 100%; 
+      max-height: 100%; 
       object-fit: cover; /* Cover the entire area of the image container */
     }
 
@@ -93,19 +91,19 @@ export default {
       font-size: 1rem;
       border: 1px solid #ccc;
       border-radius: 5px;
-      background-color: #fff; /* Cor de fundo */
-      color: #333; /* Cor do texto */
+      background-color: #fff; 
+      color: #333; 
     }
 
     .date-input:hover,
     .date-input:focus {
-      border-color: #007bff; /* Cor da borda quando o campo está em foco */
-      outline: none; /* Remove a borda de foco padrão */
+      border-color: #007bff; 
+      outline: none; 
     }
 
     .date-input:disabled {
-      background-color: #eee; /* Cor de fundo quando o campo está desativado */
-      color: #999; /* Cor do texto quando o campo está desativado */
+      background-color: #eee;
+      color: #999; 
     }
 
     .flexbox-container {
@@ -157,8 +155,8 @@ export default {
 
   .slide-info p,
   .slide-info label {
-    font-family: 'Montserrat', sans-serif; /* Define a fonte */
-    font-size: 50px; /* Define o tamanho da fonte */
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 50px; 
     font-weight: bold;
   }
 }
@@ -169,7 +167,7 @@ export default {
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 10; /* Ensure the answer appears above the carousel */
+    z-index: 10; /* Ensure the answer appears under the carousel */
   }
 
   .answer1 p,

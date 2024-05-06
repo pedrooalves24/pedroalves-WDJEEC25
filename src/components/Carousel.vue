@@ -53,7 +53,7 @@ export default {
             currentSlide.value -=1;
             restartAutoplay();
         }
-
+        //go to a certain slide
         const goToSlide = (index) => {
             currentSlide.value = index + 1;
             restartAutoplay();
